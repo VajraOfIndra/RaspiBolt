@@ -129,6 +129,22 @@ Now that LND is installed, we need to configure it to work with Bitcoin Core and
   # attempted instantly, regardless of the flag's value
   stagger-initial-reconnect=true
 
+  ########################
+  # Compact the database # (slightly modified from https://www.lightningnode.info/advanced-tools/lnd.conf by Openoms)
+  ########################
+  # Can be used on demand by commenting in/out the two options below: it can take several minutes
+  [bolt]
+  # Whether the databases used within lnd should automatically be compacted on
+  # every startup (and if the database has the configured minimum age). This is
+  # disabled by default because it requires additional disk space to be available
+  # during the compaction that is freed afterwards. In general compaction leads to
+  # smaller database files.
+  db.bolt.auto-compact=true
+  # How long ago the last compaction of a database file must be for it to be
+  # considered for auto compaction again. Can be set to 0 to compact on every
+  # startup. (default: 168h)
+  db.bolt.auto-compact-min-age=168
+
   [Bitcoin]
   bitcoin.active=1
   bitcoin.mainnet=1
@@ -618,7 +634,7 @@ LiT has its own configuration file. The settings for LND, Pool, Faraday, Loop ca
   ```sh
   $ mkdir /home/bitcoin/.lit
   ```
-* Create the LiT configuration file and paste the following content (adjust to your alias). Save and exit.
+* Create the LiT configuration file and paste the following content (adjust to your alias and paste password [B] as requited in the Faraday section). Save and exit.
 
   ```sh
   $ nano lit.conf
@@ -682,6 +698,22 @@ LiT has its own configuration file. The settings for LND, Pool, Faraday, Loop ca
   # attempted instantly, regardless of the flag's value
   lnd.stagger-initial-reconnect=true
   
+  ########################
+  # Compact the database # (slightly modified from https://www.lightningnode.info/advanced-tools/lnd.conf by Openoms)
+  ########################
+  # Can be used on demand by commenting in/out the two options below: it can take several minutes
+  # [bolt]
+  # Whether the databases used within lnd should automatically be compacted on
+  # every startup (and if the database has the configured minimum age). This is
+  # disabled by default because it requires additional disk space to be available
+  # during the compaction that is freed afterwards. In general compaction leads to
+  # smaller database files.
+  lnd.db.bolt.auto-compact=true
+  # How long ago the last compaction of a database file must be for it to be
+  # considered for auto compaction again. Can be set to 0 to compact on every
+  # startup. (default: 168h)
+  lnd.db.bolt.auto-compact-min-age=168
+  
   # [Bitcoin]
   lnd.bitcoin.active=1
   lnd.bitcoin.mainnet=1
@@ -692,10 +724,22 @@ LiT has its own configuration file. The settings for LND, Pool, Faraday, Loop ca
   lnd.tor.v3=true
   lnd.tor.streamisolation=true
   
-  # Faraday settings
+  #################
+  # Pool settings #
+  #################
+  # This option avoids the creation of channels with nodes with whom you already have a channel (set to 0 if you don't mind)
+  pool.newnodesonly=1
   
+  ####################
+  # Faraday settings #
+  ####################
+  # If connect_bitcoin is set to 1, Faraday can connect to a bitcoin node (with --txindex set) to provide node accounting services
   faraday.connect_bitcoin=1
+  # The Bitcoin node IP is the IP address of the Raspibolt, i.e. an address like 192.168.0.20
+  faraday.bitcoin.host=[Bitcoin node IP]:8332
+  # bitcoin.user provides to Faraday the bicoind RPC username, as specified in our bitcoin.conf
   faraday.bitcoin.user=raspibolt
+  # bitcoin.password provides to Faraday the bitcoind RPC password, as specified in our bitcoin.conf
   faraday.bitcoin.password=PASSWORD_[B]
   ```
 
