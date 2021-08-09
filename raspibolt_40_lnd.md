@@ -634,7 +634,7 @@ LiT has its own configuration file. The settings for LND, Pool, Faraday, Loop ca
   ```sh
   $ mkdir /home/bitcoin/.lit
   ```
-* Create the LiT configuration file and paste the following content (adjust to your alias and paste password [B] as requited in the Faraday section). Save and exit.
+* Create the LiT configuration file and paste the following content (adjust to your alias and paste password [B] as required in the Faraday section). Save and exit.
 
   ```sh
   $ nano lit.conf
