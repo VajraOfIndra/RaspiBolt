@@ -96,7 +96,7 @@ Now that LND is installed, we need to configure it to work with Bitcoin Core and
   
   # Fee settings - default LND base fee = 1000 (mSat), default LND fee rate = 1 (ppm)
   bitcoin.basefee=1000
-  bitcoin.feerate=10
+  bitcoin.feerate=1
   
   # Minimum channel size (in satoshis, default is 20,000 sats)
   minchansize=100000
@@ -354,7 +354,7 @@ Once you send real bitcoin to your RaspiBolt, you have "skin in the game".
 
 * Make sure your RaspiBolt is working as expected.
 * Get a little practice with `bitcoin-cli` and its options (see [Bitcoin Core RPC documentation](https://bitcoin-rpc.github.io/){:target="_blank"})
-* Try a few restarts (`sudo reboot`), is everything starting fine?
+* Try a few restarts (first stop lnd and bitcoind with `lncli stop`, `sudo systemctl stop lnd`, `sudo systemctl stop bitcoind` and then reboot with `sudo reboot`), is everything starting fine (don't forget to unlock the wallet after each reboot with `lncli unlock`)?
 
 ### Funding your Lightning node
 
