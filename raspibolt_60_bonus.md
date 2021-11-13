@@ -26,7 +26,11 @@ There might be some inconsistencies with the updated configuration, so handle wi
 
 In this section, you can find various optional topics that make your RaspiBolt running even smoother. I split this up in various subsections, as the individual tasks can be quite long.
 
-## [System overview](raspibolt_61_system-overview.md)
+## 1. Node maintenance
+
+### 1.1 Dashboard & Appearance
+
+##### [System overview](bonus/raspibolt_61_system-overview.md)
 
 *Difficulty: easy*
 
@@ -34,22 +38,40 @@ Your RaspiBolt will greet you with a quick system summary on login:
 
 [![MotD system overview](images/60_status_overview.png)](raspibolt_61_system-overview.md)
 
-## [Auto unlock LND on startup](raspibolt_6A_auto-unlock.md)
+##### [Pimp the command line](raspibolt_62_commandline.md)
 
-*Difficulty: medium*
+*Difficulty: easy*
 
-Manually unlocking the LND wallet every time the system starts is not really feasible if your RaspiBolt is meant to run reliably somewhere in a closet. This script automatically unlocks the wallet on startup or service-restart. This comes at a minimal security cost, however, as the password needs to be stored on the device.
+Make your command line prompt shine with a golden ฿ and use more colors overall:
 
-## [Anonymous node with Tor](raspibolt_69_tor.md)
+[![Pimped prompt](images/60_pimp_prompt_result.png)](raspibolt_62_commandline.md)
+
+### 1.2 Security & privacy
+
+##### [Anonymous node with Tor](bonus/raspibolt_69_tor.md)
 
 *Difficulty: medium*
 
 Route all your Bitcoin traffic over the Tor network to stay anonymous and avoid leaking private information like your public IP address.
 Only for older configurations, the latest RaspiBolt v2 has this already enabled by default.
 
-[![Tor](images/69_tor.png)](raspibolt_69_tor.md)
+[![Tor](images/69_tor.png)](bonus/raspibolt_69_tor.md)
 
-## [Electrum Personal Server](raspibolt_64_electrum.md)
+### 1.3 Resilience
+
+##### [System recovery](bonus/raspibolt_65_system-recovery.md)
+
+Difficulty: easy
+
+In case your microSD card gets corrupted or you brick your node, it's handy to have a quick recovery image at hand. It's not a full backup solution, but allows a system recovery.
+
+### 1.4 Hardware
+
+## 2. Bitcoin tools
+
+### 2.1 Electrum Personal Server
+
+##### [Electrum Personal Server](bonus/raspibolt_64_electrum.md)
 
 *Difficulty: medium*
 
@@ -59,57 +81,13 @@ Mostly for older configurations, the latest RaspiBolt v2 already has a full Elec
 
 [![Electrum](images/60_eps_electrumwallet.png)](raspibolt_64_electrum.md)
 
-## [Zap Desktop Lightning Wallet](raspibolt_71_zap.md)
+### 2.2 Multisig
 
-*Difficulty: easy*
+##### [Specter Wallet](bonus/raspibolt_76_specter-desktop.md)
 
-The Zap desktop app (https://github.com/LN-Zap/zap-desktop) is a cross platform Lightning Network wallet focused on user experience and ease of use.
+### 2.3 Coinjoin
 
-![Zap Desktop](images/71_zap1_cropped.png)
-
-## [Zap iOS Lightning Wallet](raspibolt_72_zap-ios.md)
-
-*Difficulty: medium*
-
-The Zap iOS app (https://zap.jackmallers.com) provides a neat interface for the RaspiBolt to manage peers & channels, make payments and create invoices.
-
-![Zap iOS](images/72_zapios.png)
-
-## [lntop](raspibolt_74_lntop.md)
-
-*Difficulty: easy*
-
-lntop is an interactive text-mode channels viewer for Unix systems.
-
-![lntop](images/74_lntop.png)
-
-## [Pimp the command line](raspibolt_62_commandline.md)
-
-*Difficulty: easy*
-
-Make your command line prompt shine with a golden ฿ and use more colors overall:
-
-[![Pimped prompt](images/60_pimp_prompt_result.png)](raspibolt_62_commandline.md)
-
-## [Use lncli on a different computer](raspibolt_66_remote_lncli.md)
-
-*Difficulty: easy*
-
-Control your Lightning node from a different computer within you network, eg. from a Windows machine.
-
-## [System recovery](raspibolt_65_system-recovery.md)
-
-Difficulty: easy
-
-In case your microSD card gets corrupted or you brick your node, it's handy to have a quick recovery image at hand. It's not a full backup solution, but allows a system recovery.
-
-## [Additional scripts: show balance & channels](raspibolt_67_additional-scripts.md)
-
-Difficulty: easy
-
-These additional bash scripts display a balance overview (on-chain & in channels, active & inactive) as well as a nicely formatted channels overview.
-
-## JoinMarket
+##### JoinMarket
 
 *Difficulty: advanced*
 
@@ -119,9 +97,83 @@ Even if you aren't interested in privacy of your coins, you can use JoinMarket f
 
 **[JoinMarket on RaspiBolt](https://github.com/kristapsk/raspibolt-extras/blob/master/joinmarket.md)** by Kristaps Kaupe
 
-## Even more Extras
+## 3. Lightning tools
 
-**[RaspiBolt-Extras](https://github.com/robclark56/RaspiBolt-Extras/blob/master/README.md)** by Rob Clark
+### 3.1 Maintenance
+
+##### [Auto unlock LND on startup](bonus/raspibolt_6A_auto-unlock.md)
+
+*Difficulty: medium*
+
+Manually unlocking the LND wallet every time the system starts is not really feasible if your RaspiBolt is meant to run reliably somewhere in a closet. This script automatically unlocks the wallet on startup or service-restart. This comes at a minimal security cost, however, as the password needs to be stored on the device.
+
+##### [Use lncli on a different computer](raspibolt_66_remote_lncli.md)
+
+*Difficulty: easy*
+
+Control your Lightning node from a different computer within you network, eg. from a Windows machine.
+
+##### Circuit Breaker
+
+### 3.2 Dashboard & wallets
+
+#### 3.2.1 CLI-only
+
+##### [lntop](raspibolt_74_lntop.md)
+
+*Difficulty: easy*
+
+lntop is an interactive text-mode channels viewer for Unix systems.
+
+![lntop](images/74_lntop.png)
+
+###### [Additional scripts: show balance & channels](raspibolt_67_additional-scripts.md)
+
+Difficulty: easy
+
+These additional bash scripts display a balance overview (on-chain & in channels, active & inactive) as well as a nicely formatted channels overview.
+
+#### 3.2.2 GUI - Web
+
+##### Ride The Lightning
+
+##### ThunderHub
+
+#### 3.2.3 GUI - Desktop
+
+##### [Zap Desktop Lightning Wallet](bonus/raspibolt_71_zap.md)
+
+*Difficulty: easy*
+
+The Zap desktop app (https://github.com/LN-Zap/zap-desktop) is a cross platform Lightning Network wallet focused on user experience and ease of use.
+
+![Zap Desktop](images/71_zap1_cropped.png)
+
+#### 3.2.3 GUI - Mobile
+
+##### [Zeus](bonus/zeus-over-tor.md)
+
+##### [Zap iOS Lightning Wallet](bonus/raspibolt_72_zap-ios.md)
+
+*Difficulty: medium*
+
+The Zap iOS app (https://zap.jackmallers.com) provides a neat interface for the RaspiBolt to manage peers & channels, make payments and create invoices.
+
+![Zap iOS](images/72_zapios.png)
+
+### 3.3 Rebalancing
+
+##### Balance Of Satoshis
+
+##### rebalance-lnd
+
+### 3.4 Fee policy
+
+##### charge-lnd
+
+## 4. Even more Extras
+
+##### **[RaspiBolt-Extras](https://github.com/robclark56/RaspiBolt-Extras/blob/master/README.md)** by Rob Clark
 
 * Lights-Out: automatic unlocking of wallet and dynamic ip
 * RaspiBoltDuo: testnet & mainnet running simultaneously
