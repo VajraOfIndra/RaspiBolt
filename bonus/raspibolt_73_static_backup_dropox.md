@@ -86,5 +86,5 @@ Logon to your dropbox and see if you have a new file.
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](../raspibolt_60_bonus.md) 
 
