@@ -72,4 +72,4 @@ When switching to mainnet, follow the **Testnet** section but removing all insta
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
