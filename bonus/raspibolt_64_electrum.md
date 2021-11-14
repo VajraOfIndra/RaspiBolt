@@ -190,4 +190,4 @@ Congratulations, you have now one of the best Bitcoin desktop wallet, capable of
 
 ---
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
