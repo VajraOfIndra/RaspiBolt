@@ -89,4 +89,4 @@ That's it, Now you can only SSH to your raspibolt using your trezor.
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
