@@ -46,4 +46,4 @@ Bash completion will be enabled after your next login.
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](../raspibolt_60_bonus.md) 
