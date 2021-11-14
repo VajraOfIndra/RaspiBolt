@@ -81,4 +81,4 @@ We will connect Zap to the RaspiBolt using a connection string that includes the
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](../raspibolt_60_bonus.md) 
