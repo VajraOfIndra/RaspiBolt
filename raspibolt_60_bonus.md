@@ -37,7 +37,7 @@ In this section, you can find various optional topics that make your RaspiBolt r
     * 📗 [Hardware-based (Trezor) SSH authentification](bonus/raspibolt_75_trezor-agent.md) 
 * **Hardware**
     * 📙 [Upgrade external drive](bonus/raspibolt_77_upgrade-external-drive.md) 
-    * 📙 [Odroid setup: an alternative to Raspberry Pi]()raspibolt_76_odroid_setup.md 
+    * 📙 [Odroid setup: an alternative to Raspberry Pi](bonus/raspibolt_76_odroid_setup.md)
   
 
 ## 2. Bitcoin tools
