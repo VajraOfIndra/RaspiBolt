@@ -98,4 +98,4 @@ This is why a script that automatically unlocks the wallet is  helpful. The pass
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
