@@ -136,4 +136,4 @@ The nifty helper tool LND Connect helps to pair the RaspiBolt with the iPhone, e
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
