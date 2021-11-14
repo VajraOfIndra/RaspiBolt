@@ -547,4 +547,4 @@ As the blockchain continues to grow you'll be able to repeat these steps in the 
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
