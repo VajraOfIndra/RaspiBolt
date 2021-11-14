@@ -49,4 +49,4 @@ Both methods work, but the original method does not rely on third party applicat
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
