@@ -460,4 +460,4 @@ Updating to a [new release](https://github.com/cryptoadvance/specter-desktop/rel
   ```
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
