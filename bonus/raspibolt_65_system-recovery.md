@@ -77,4 +77,4 @@ Your node should now be catching up and soon be operational again.
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
