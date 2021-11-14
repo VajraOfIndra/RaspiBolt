@@ -150,4 +150,4 @@ The table below shows which commands are permitted by each macaroon
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](../raspibolt_60_bonus.md) 
