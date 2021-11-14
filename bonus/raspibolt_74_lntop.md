@@ -27,5 +27,5 @@ $ lntop
 ```
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](../raspibolt_60_bonus.md) 
 
