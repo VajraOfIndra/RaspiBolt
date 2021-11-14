@@ -270,4 +270,4 @@ Don't forget to restart bitcoind with `sudo systemctl restart bitcoind` each tim
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md)
+<< Back: [Bonus guides](../raspibolt_60_bonus.md)
