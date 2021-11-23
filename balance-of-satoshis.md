@@ -1,19 +1,34 @@
 ---
 layout: default
 title: Balance of Satoshis
-parent: Bonus Section
-nav_order: 130
+parent: Bonus Lightning
+grand-parent: Bonus Section
+nav_exclude: true
 has_toc: false
 ---
-# Bonus guide: Balance of Satoshis
 
-*Difficulty: simple*
+# Balance of Satoshis
+{: .no_toc }
+
+Difficulty: Easy
+{: .label .label-green }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+## Introduction
 
 [Balance of Satoshis](https://github.com/alexbosworth/balanceofsatoshis) (BoS), created and maintained by LND developper Alex Bosworth, is a tool to work with LND channel balances.
 
 *Requirements:*
 
-* LND (or LND as part of Lightning Terminal/litd)
+* LND (or LND as part of Lightning Terminal)
 * Requires an installation of Node v12.0+
 
 *Acknowledgments:*
@@ -22,73 +37,74 @@ has_toc: false
 
 ## Check NodeJS
 
-* NojeJS v12.0 or above should have been installed for the BTC RPC Explorer. We can check our version of NodeJS with user 'admin': 
+* NodeJS v12.0 or above should have been installed for the BTC RPC Explorer. We can check our version of NodeJS with user "admin": 
 
   ```sh
   $ node -v
-  >v14.17.4
+  > v14.17.4
   ```
 
 * If the version is v12.0 or above, you can move to section **Create bos user**.
+
 * If NodeJS is not installed, follow [these commands](https://stadicus.github.io/RaspiBolt/raspibolt_55_explorer.html#install-nodejs) to install it.
+
 * If NodeJS version is older than v12.0, you can attempt to upgrade it:
-** First, we need to clean the npm cache, install n (Node's version manager) and install the latest stable version.
-  ```sh
-  $ sudo su
-  $ npm cache clean -f
-  $ npm install -g n
-  $ sudo n stable
-  $ exit
-  $ node -v
-  ```
+  * First, we need to clean the npm cache, install n (Node's version manager) and install the latest stable version
+    
+    ```sh
+    $ sudo su
+    $ npm cache clean -f
+    $ npm install -g n
+    $ sudo n stable
+    $ exit
+    $ node -v
+    ```
 
 ## Create the bos user and set up npm-global
 
-* Create a new user with your password [ A ]  
+* Create the "bos" user, make "bos" a member of the "bitcoin" group and create a symlink to the LND directory
 
   ```sh
-  $ sudo adduser bos
+  $ sudo adduser --disabled-password --gecos "" bos
+  $ sudo /usr/sbin/usermod --append --groups bitcoin bos
+  $ sudo ln -s /mnt/ext/lnd/ /home/bos/.lnd
   $ sudo su - bos
   ```
   
 * Set up nmp-global
  
   ```sh
-  $ mkdir /home/bos/.npm-global
+  $ mkdir ~/.npm-global
   $ npm config set prefix '/home/bos/.npm-global'
-  $ exit
-  $ sudo bash -c "echo 'PATH=$PATH:/home/bos/.npm-global/bin' >> /home/bos/.bashrc"
+  ```
+
+* Update path (to avoid having to type the full path each time you'll invoke bos). First, open the .profile file with nano
+  
+  ```sh
+  $ nano ~/.profile
+  ```
+
+* Add the following line at the end of the file, save and exit
+ 
+  ```ini
+  PATH="$HOME/.npm-global/bin:$PATH"
+  ```
+
+* Use the `source` command to make the change effective
+ 
+  ```sh
+  source ~/.profile
   ```
   
 ## Download source code and install bos
-
-* Download the source code
   
-  ```sh
-  $ sudo su - bos
-  $ git clone https://github.com/alexbosworth/balanceofsatoshis.git /home/bos/balanceofsatoshis
-  $ cd balanceofsatoshis
-  ```  
-  
-* Create symlink to lnd directory
-
-  ```sh
-  $ sudo ln -s /mnt/ext/lnd/ /home/bos/.lnd
-  ```
-
-* Make bos a member of the bitcoin group
-  
-  ```sh
-  $ sudo /usr/sbin/usermod --append --groups bitcoin bos
-  ```
-
 * Install bos
 
   ```sh
-  $ npm install -g balanceofsatoshis
+  $ npm install -g balanceofsatoshis --no-audit
   ```
   
-## Using bos (with the bos user)
+## Using bos (with the "bos" user)
 
 * To check the version, you can use one of the following command
 
