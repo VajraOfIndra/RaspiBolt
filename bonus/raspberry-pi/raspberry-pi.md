@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Bonus Raspberry Pi
+title: Raspberry Pi
 nav_order: 1000
 parent: Bonus Section
 has_children: false
 has_toc: false
 ---
+
+# Bonus Section: Raspberry Pi guides
 
 ## Dashboards & Appearance
 * **[System overview](system-overview.md)** - your RaspiBolt will greet you with a quick system summary on login
