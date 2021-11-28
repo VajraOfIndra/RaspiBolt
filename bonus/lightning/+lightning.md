@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bonus Lightning
+title: + Lightning
 nav_order: 3000
 parent: Bonus Section
 has_children: false
