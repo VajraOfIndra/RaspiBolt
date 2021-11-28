@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Raspberry Pi
+title: + Raspberry Pi
 nav_order: 1000
 parent: Bonus Section
 has_children: false
