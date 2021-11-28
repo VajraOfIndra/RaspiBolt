@@ -18,7 +18,7 @@ has_toc: false
 
 ## Pivacy
 * *Coinjoin*
-  * **[JoinMarket on RaspiBolt](https://github.com/kristapsk/raspibolt-extras/blob/master/joinmarket.md)** - a CoinJoin software, which allows you to increase privacy and fungibility of on-chain Bitcoin transactions and also get a little passive income from your bitcoins
+  * **[JoinMarket on RaspiBolt](https://github.com/kristapsk/raspibolt-extras/blob/master/joinmarket.md){:target="_blank"}** - a CoinJoin software, which allows you to increase privacy and fungibility of on-chain Bitcoin transactions and also get a little passive income from your bitcoins
 
 ---
 
