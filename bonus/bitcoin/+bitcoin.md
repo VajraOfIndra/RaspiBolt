@@ -7,6 +7,8 @@ has_children: false
 has_toc: false
 ---
 
+# Bonus Section: Bitcoin guides
+
 ## Electrum Servers
 * **[Electrum Personal Server](electrum-personal-server.md)** - an alternative to Electrs
 
