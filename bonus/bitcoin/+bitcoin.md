@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bonus Bitcoin
+title: + Bitcoin
 nav_order: 2000
 parent: Bonus Section
 has_children: false
