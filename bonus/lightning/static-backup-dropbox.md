@@ -6,6 +6,7 @@ grand_parent: Bonus Section
 nav_exclude: true
 has_toc: false
 ---
+
 ## Bonus guide: Automatic backup of static.channel to your Dropbox
 {: .no_toc }
 
@@ -99,4 +100,4 @@ Logon to your dropbox and see if you have a new file.
 
 ------
 
-<< Back: [Bonus Lightning](bonus-lightning.md)
+<< Back: [+ Lightning](+lightning.md)
